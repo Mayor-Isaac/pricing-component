@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  font-size: 1.2rem;
+  text-align: center;
+  color: hsl(232, 13%, 33%);
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+}
+.container{
+  max-width: 1100px;
+  margin: 0 auto;
+}
+header{
+  padding: 2.5rem 0;
+  color: hsl(234, 14%, 74%);
+}
+.flex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+h2{
+  color: hsl(232, 13%, 33%);
+}
+.gradient{
+  background-image: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+.switch{
+  gap: 15px;
+  margin: 2rem 0;
+}
+.toggle{
+  border-radius: 20px;
+  height: 22px;
+  width: 45px;
+  transition: all .3s ease-in-out;
+  padding:2px;
+}
+.toggle:hover{
+  background-image: linear-gradient(hsl(234, 14%, 74%),hsl(234, 14%, 74%));
+  cursor: pointer;
+}
+.dot{
+  height: 100%;
+  width: 35%;
+  margin-left: auto;
+  border-radius: 50%;
+  background-color: hsl(240, 78%, 98%);
+}
+section{
+  padding: 3rem;
+}
+.card{
+  background-color: hsl(240, 78%, 98%);
+  padding: 2rem;
+  width: 30%;
+  transition: transform .2s ease-in-out;
+  border-radius: 8px;
+}
+.card h4:not(:first-of-type){
+  padding: .3rem;
+  border-top: 1px solid hsl(234, 14%, 74%);
+}
+.card h4:last-of-type{
+  border-bottom: 1px solid hsl(234, 14%, 74%);
+}
+.card--active{
+  transform: scaleY(1.2);
+  color: hsl(240, 78%, 98%);
+}
+.card--active h1{
+  color: hsl(240, 78%, 98%);
+}
+.card--active .btn{
+  color: hsl(237, 63%, 64%);
+  background-image: linear-gradient(hsl(240, 78%, 98%) ,hsl(240, 78%, 98%));
+}
+.card--active .btn:hover{
+  color: hsl(240, 78%, 98%);
+  border: 1px solid hsl(240, 78%, 98%);
+  background-image: linear-gradient(hsla(236, 72%, 79%, 0),hsla(237, 63%, 64%, 0));
+}
+h1{
+  color: hsl(0, 0%, 0%);
+  font-size: 3rem;
+  font-weight: 700;
+}
+.btn{
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  border: none;
+  padding: .8rem 1.6rem;
+  margin: 1rem 0;
+  color: hsl(240, 78%, 98%);
+  width: 100%;
+  background-image: linear-gradient(hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+.btn:hover{
+  background-color: transparent;
+  color: hsl(237, 63%, 64%);
+  border: 1px solid hsl(237, 63%, 64%);
+  background-image: linear-gradient(hsl(240, 78%, 98%) ,hsl(240, 78%, 98%));
+}
+.annual{
+  display: none;
+}
+.attribution {
+  font-size: 1rem;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 830px){
+  section{
+    padding: 1rem 1rem 3rem;
+  }
+  .card{
+    padding: 1.5rem;
+    width: 32%;
+  }
+  h1{
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 680px){
+  section{
+    flex-direction: column;
+    gap: 20px;
+  }
+  .card{
+    width: 70%;
+  }
+  .card--active{
+    transform: scale(1);
+  }
+}
+@media screen and (max-width: 500px){
+  .card{
+    width: 80%;
+  }
+}
